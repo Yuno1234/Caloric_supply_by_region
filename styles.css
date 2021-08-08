@@ -1,8 +1,17 @@
+body {
+    background-color: #302f3b;
+}
+
+svg {
+    width: 100%;
+    margin-top: 7vh;
+}
+
 path {
-    fill: #d3d3d3;
+    fill: #aaaaaa;
     transition: .6s fill;
 }
 
 path:hover {
-    fill:#eee;
+    fill:#f8f8f8;
 }
