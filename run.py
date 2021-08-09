@@ -1,4 +1,6 @@
-from flask import Flask
+from flask import Flask, render_template
+import sqlite3
+
 app = Flask(__name__)
 
 # env\Scripts\activate.bat
@@ -7,6 +9,9 @@ app = Flask(__name__)
 # set FLASK_DEBUG=1
 # py -m flask run
 
+KCALDB = 'kcal-per-person.db'
+
 @app.route('/')
 def index():
-    return('<h1>hello world</h1>')
+    con = sqlite3.connect(KCALDB)
+    return render_template('index.html')

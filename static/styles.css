@@ -2,6 +2,10 @@ body {
     background-color: #302f3b;
 }
 
+label {
+    color: white;
+}
+
 svg {
     width: 100%;
     margin-top: 7vh;
