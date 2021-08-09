@@ -11,7 +11,35 @@ app = Flask(__name__)
 
 KCALDB = 'kcal-per-person.db'
 
+# def getColor(kcal):
+#     if kcal > 3500 and kcal < 4000:
+#         return 
+#     elif kcal > 3000 and kcal < 3499:
+#         return
+#     elif kcal > 2500 and kcal < 2999:
+#         return
+#     elif kcal > 2000 and kcal < 2499:
+#         return
+#     elif kcal > 1500 and kcal < 1999:
+#         return
+#     elif kcal > 0 and kcal < 1499:
+#         return
+#     else
+#         return
+
+country = {
+  'Afghanistan': '#FF2211'
+}
+
 @app.route('/')
 def index():
     con = sqlite3.connect(KCALDB)
-    return render_template('index.html')
+    years = []
+    cur = con.execute('SELECT year FROM food_supply_kcal WHERE entity = "Japan"')
+    for row in cur:
+        years.append(list(row))
+
+
+    
+    con.close()
+    return render_template('index.html', years=years, country=country)
