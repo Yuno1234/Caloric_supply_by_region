@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import sqlite3
 
 app = Flask(__name__)
@@ -31,15 +31,19 @@ country = {
   'Afghanistan': '#FF2211'
 }
 
-@app.route('/')
+@app.route('/', methods=['get'])
 def index():
-    con = sqlite3.connect(KCALDB)
-    years = []
-    cur = con.execute('SELECT year FROM food_supply_kcal WHERE entity = "Japan"')
-    for row in cur:
-        years.append(list(row))
+  con = sqlite3.connect(KCALDB)
+  years = []
+  cur = con.execute('SELECT year FROM food_supply_kcal WHERE entity = "Japan"')
+  for row in cur:
+    years.append(list(row))
 
+  countries = []
+  cur = con.execute('SELECT entity, kcal FROM food_supply_kcal WHERE year = "2017"')
+  for row in cur:
+    year.append(list(row))
 
-    
-    con.close()
-    return render_template('index.html', years=years, country=country)
+  print(request.form)
+  con.close()
+  return render_template('index.html', years=years, country=country)
