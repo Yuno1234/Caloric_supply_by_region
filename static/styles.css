@@ -1,21 +1,22 @@
 body {
-    background-color: #302f3b;
+  background-color: #302f3b;
 }
 
 label {
-    color: white;
+  color: white;
 }
 
 svg {
-    width: 100%;
-    margin-top: 7vh;
+  width: 100%;
+  margin-top: 7vh;
 }
 
 path {
-    fill: #aaaaaa;
-    transition: .6s fill;
+  fill: #aaaaaa;
+  transition: 0.6s fill;
 }
 
 path:hover {
-    fill:#f8f8f8;
+  stroke: #000000;
+  stroke-width: 3;
 }

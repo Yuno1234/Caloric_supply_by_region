@@ -13,19 +13,19 @@ KCALDB = 'kcal-per-person.db'
 
 def getColor(kcal):
     if kcal > 3500 and kcal < 4000:
-        return "#FF0000"
+        return "#1a9850"
     elif kcal > 3000 and kcal < 3499:
-        return "#CC0000"
+        return "#91cf60"
     elif kcal > 2500 and kcal < 2999:
-        return "#990000"
+        return "#d9ef8b"
     elif kcal > 2000 and kcal < 2499:
-        return "#550000"
+        return "#fee08b"
     elif kcal > 1500 and kcal < 1999:
-        return "#330000"
+        return "#fc8d59"
     elif kcal > 0 and kcal < 1499:
-        return "#110000"
+        return "#d73027"
     else:
-        return "#000000"
+        return "#e0e0e0"
 
 country = {}
 
