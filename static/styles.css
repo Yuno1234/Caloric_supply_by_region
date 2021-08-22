@@ -1,12 +1,19 @@
+header {
+  background-color: #262830;
+  margin: auto;
+}
+
 body {
   background-color: #302f3b;
+  margin: 0;
 }
 
 h1 {
   color: white;
   font-family: 'Besley', serif;
   margin-bottom: 0;
-  margin-top: 20px;
+  margin-top: 0;
+  padding-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,7 +25,7 @@ p {
   color: white;
   font-family: 'Besley', serif;
   margin-top: 0;
-  margin-bottom: 30px;
+  padding-bottom: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
