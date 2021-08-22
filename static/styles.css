@@ -2,13 +2,41 @@ body {
   background-color: #302f3b;
 }
 
-label {
+h1 {
   color: white;
+  font-family: 'Besley', serif;
+  margin-bottom: 0;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Besley', serif;
+}
+
+p {
+  color: white;
+  font-family: 'Besley', serif;
+  margin-top: 0;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-family: Lato, "Helvetica Neue", sans-serif;
 }
 
 svg {
-  width: 100%;
-  margin-top: 7vh;
+  display: block;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+
+label {
+  color: white;
+  font-family: 'Besley', serif;
+  font-size: 20px;
 }
 
 path {
@@ -20,3 +48,14 @@ path:hover {
   stroke: #000000;
   stroke-width: 3;
 }
+
+form {
+  margin-left: 10%;
+}
+
+.kcal {
+  font-size: 4px;
+  fill: white;
+  font-family: Lato, "Helvetica Neue", sans-serif;
+}
+
